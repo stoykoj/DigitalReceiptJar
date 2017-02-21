@@ -1,0 +1,15 @@
+#bubblesCanvas {
+    background-color: transparent;
+}
+
+#key{
+    font-family: Helvetica;
+    border-radius: 5px;
+    width: 30%;
+    /*margin: 15px;*/
+    margin-bottom: 20px;
+    margin-right: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(221, 219, 219, 0.5);
+}

@@ -1,0 +1,102 @@
+/*body{
+	background-color: #fdf5e6;
+}*/
+
+#b{
+	/*background-color: #fdf5e6;*/
+	background: url(../img/galaxy.jpg);
+	padding-top: 70px;
+	/*padding-left: 50px;*/
+}
+
+#confirm_button{
+	margin-top:10px;
+}
+
+#background_img{
+	opacity: 0.7;
+}
+
+#page_header{
+	background-color: rgba(253,245,230, 0.85);
+	height: 12%;
+}
+
+#box{
+	border-radius: 5px;
+	margin: 15px;
+	padding-top: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: rgba(221, 219, 219, 0.5);
+}
+
+/*
+#page_header{
+	background-color: rgba(253,245,230, 0.7);
+	padding-top: 5px;
+	width: 100%;
+	height: 15%;
+	text-align: center;
+}*/
+#page_header h2{
+	padding-left: 2%;
+	padding-top: 5px;
+}
+#entry_rows{
+	font-size: 20px;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+#user_hint{
+	text-align: right;
+}
+
+#prompt{
+	font-style: normal;
+}
+
+#or{
+	text-align: left;
+	
+	
+}
+/*#who_owes{
+	font-style: italic;
+}*/
+/*#select_prompt{
+	font-style: italic;
+}*/
+
+#owes{
+	font-size: 20px;
+}
+
+#owing_box{
+	margin-top: 20px;
+	margin-bottom: 15px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.7);
+	/*padding: 6px;*/
+	bottom: 5px;
+	padding: 10px;
+}
+
+#text_entry{
+	margin-top: 20px;
+	border: 1px solid black;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.7);
+	color: rgba(0, 0, 0, 0.6);
+	/*font-style: italic;*/
+}
+
+#next_btn{
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+/*#profile_img{
+	width: 3%;
+}*/

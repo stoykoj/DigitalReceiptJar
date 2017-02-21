@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Digital Receipt Jar</title>
+
+    <!-- Bootstrap -->
+    <link href="resources/css/bootstrap.min.css" type = "text/css" rel="stylesheet">
+	<!--<link href="resources/css/custom_template.css" type = "text/css" rel="stylesheet">-->
+	<link rel="stylesheet" type="text/css" href="resources/css/custom_template.css">
+
+	<link href="resources/css/custom_notification.css" type="text/css" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/a39b8b82a1.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="b">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+                <a class="navbar-brand" href="mainscreen.html" style="font-size: 30px"><img src="resources/img/djr.png" width="500" height="40"></a>
+			</div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="mainscreen.html" class="active" data-toggle="tooltip" title="Home"><img src="resources/img/house.png" width="20"></a></li>
+                    <li><a href="addTab.html" data-toggle="tooltip" title="Add a Tab"><img src="resources/img/plus_sign.png" width="20"></a></li>
+                    <li><a href="notificationCentre.html" data-toggle="tooltip" title="Notification Centre"><img src="resources/img/mail.png" width="20"></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="My Profile" id="profile_dropdown"><!--My Profile--><img id="profile_img" src="resources/img/silhouette.png" width="20"><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Edit my Profile</a></li>
+                            <li><a href="#">Preferences</a></li>
+                            <li><a href="addTab.html">Add a Tab</a></li>
+                            <li><a href="notificationCentre.html">Notification Centre</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="signin.html">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+		</div>
+		
+		
+	</div>
+	<div id="box">
+		<div class="container">
+	      	<div class="jumbotron text-center">
+            		<i class="fa fa-send-o fa-4x"></i>
+          		
+	        	<h2>Outgoing Communication</h2>
+	        	<a href="notificationCentre.html" class="btn btn-danger">Back to Notification Centre</a>
+	      	</div>
+	      	<div class="row">
+	        	<div class="col-md-6">
+	          		<div class="panel panel-default">
+  						<div class"panel-body">
+                <h4 align="center"><i class="fa fa-exclamation"></i><strong> Sent Notifications</strong></h4>
+  							<ul id="notifications" style="list-style:none">
+  								<li><i class="fa fa-dollar"></i> Aaron Samuels owes you <strong>$15</strong><p id="lentOn" class="right">From 3 months ago</p></li>
+  								<li><i class="fa fa-dollar"></i> Gretchen Wieners owes you <strong>$55</strong><p id="lentOn" class="right">From 2 months ago</p></li>
+  								<li><i class="fa fa-dollar"></i> Regina George owes you <strong>$76</strong><p id="lentOn" class="right">From 22 days ago</p></li>
+  								<li><i class="fa fa-dollar"></i> Cady Heron owes you <strong>$30</strong><p id="lentOn" class="right">From 15 days ago</p></li>
+  								<li><i class="fa fa-dollar"></i> Janet Ian owes you <strong>$200</strong><p id="lentOn" class="right">From one week ago</p></li>
+  							</ul>
+  						</div>
+					</div>
+	        	</div>
+        		<div class="col-md-6">
+          			<div class="panel panel-default">
+  						  <div class="panel-body">
+                  <h4 align="center"><i class="fa fa-envelope-open"></i> <strong>Sent Messages</strong></h4>
+    						  <ul id="messages" style="list-style: none">
+    							<li><a href="#"<i class="fa fa-envelope-square"></i></a> Regina George<p id="date" class="right">18/10/16</p></li>
+    							<li><a href="#"<i class="fa fa-envelope-square"></i></a> Janice Ian<p id="date" class="right">14/09/16</p></li>
+    							<li><a href="#"<i class="fa fa-envelope-square"></i></a> Aaron Samuels <3<p id="date" class="right">09/09/16</p></li>
+    							<li><a href="#"<i class="fa fa-envelope-square"></i></a> Gretchen Wieners<p id="date" class="right">02/07/16</p></li>
+    							<li><a href="#"<i class="fa fa-envelope-square"></i></a> Damian<p id="date" class="right">26/02/16</p></li>
+  						</ul>
+  						</div>
+					</div>
+        </div>
+        <div style="text-align: center; padding-bottom: 20px">
+          <a href="#navSettings" class="btn btn-default"data-toggle="modal"><i class="fa fa-cog"></i><strong> Manage notification settings</strong> </a>
+        </div>
+	      	
+	    </div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <div class="modal fade" id="msg" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Send message</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-inline">
+          <div class="form-group">
+              <label for="user">To:</label>
+              <input type="user" class="form-control" id="user" placeholder="Enter email or @username">
+            </div>
+          </form>
+          <p></p>
+          <div class="form-group">
+            <label for="sel1">Select standard message:</label>
+            <select class="form-control" id="sel1">
+              <option>Select...</option>
+              <option>Please pay me back ASAP!</option>
+              <option>I need my money by the end of the month.</option>
+              <option>I promise I'll pay you within the week</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="custom-msg">OR Custom message:</label>
+              <textarea class="form-control" rows="5" id="comment" placeholder="Type message..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-danger" data-dismiss="modal">Discard</a>
+            <a class="btn btn-info" data-dismiss="modal">Send</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="navSettings" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Manage Notification Settings</h4>
+          </div>
+          <div class="modal-body">
+            <!--change default time between reminders-->
+             <div class="form-group">
+              <label for="sel2">Change default notification frequency:</label>
+              <select class="form-control" id="sel2">
+              <option>Select...</option>
+              <option>Daily</option>
+              <option>Weekly</option>
+              <option>Twice a month</option>
+              <option>Monthly</option>
+              <option>Custom</option>
+              </select>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-danger" data-dismiss="modal">Cancel</a>
+            <a class="btn btn-info" data-dismiss="modal">Save all changes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="resources/js/bootstrap.min.js"></script>
+  </body>
+</html>

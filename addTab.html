@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Digital Receipt Jar: Adding a Tab</title>
+
+    <!-- Bootstrap -->
+    <link href="resources/css/bootstrap.min.css" type = "text/css" rel="stylesheet">
+	  <link rel = "stylesheet" type="text/css" href="resources/css/custom_template.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/custom_addTab.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="resources/js/addTab.js"></script>
+      <script src="resources/js/mainscreen.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="b">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="mainscreen.html" style="font-size: 30px"><img src="resources/img/djr.png" width="500" height="40"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<!--<li><a href="#">Home</a></li>
+					<li class="active"><a href="#">Add a Tab</a></li>
+					<li><a href="#">Notification Centre</a></li>-->
+					<li><a href="mainscreen.html"><img src="resources/img/house.png" width="20" data-toggle="tooltip" title="Home"></a></li>
+					<li><a href="addTab.html" class="active"><img src="resources/img/plus_sign.png" width="20" data-toggle="tooltip" title="Add a Tab"></a></li>
+					<li><a href="notificationCentre.html"><img src="resources/img/mail.png" width="20" data-toggle="tooltip" title="Notification Centre"></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profile_dropdown"><!--My Profile --><img id="profile_img" src="resources/img/silhouette.png" width="20" data-toggle="tooltip" title="My Profile"><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Edit my Profile</a></li>
+							<li><a href="#">Preferences</a></li>
+							<li><a href="addTab.html">Add a Tab</a></li>
+							<li><a href="notificationCentre.html">Notification Centre</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Settings</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="signin.html">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="page_header">
+		<div class="col-sm-12">
+			<h2>Adding a Tab</h2>
+		</div>
+	</div>
+	<div id="box">
+		<div id="text_entry">
+			<div class="row" id="entry_rows">
+				<div class="col-sm-10">
+					<div class="form-group">
+						<label for="usr" id="prompt">Username:</label>
+						<input id="other_user" type="text" class="form-control"placeholder="Other Person's Username">
+						<button id="confirm_button" class="btn btn-default" role="button" onclick="updateOptionsUserName();">Confirm</button>
+					</div>
+
+				</div>
+				<div class="col-sm-2">
+				</div>
+			</div>
+		</div>
+		<div id="text_entry">
+			<div class="row"id="or">
+				<div class="col-sm-12">
+					<h3>Or if they don't have an account...</h3>
+				</div>
+			</div>
+		<!--<div id="text_entry">-->
+			<div class="row" id="entry_rows">
+				<div class="col-sm-10">
+					<div class="form-group">
+						<label for="usr" id="prompt">Name:</label>
+						<input id="other_name" type="text" class="form-control" placeholder="Other Person's Name">
+					</div>
+					<div class="form-group">
+						<label for="usr" id="prompt">Email:</label>
+						<input id="other_email" type="text" class="form-control" placeholder="Other Person's Email">
+					</div>
+					<button class="btn btn-default" role="button" onclick="updateOptionsName();">Confirm</button>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<div id="owing_box">
+			<div class="row">
+				<div class="col-sm-6">
+					<h3 id="who_owes">Who owes whom money?</h3>
+				</div>
+				<div class="col-sm-6"></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="form-group">
+					  <!--<label for="sel1" id="select_prompt">Select Debtor...</label>-->
+					  <select class="form-control" id="first_selection">
+						<option>You</option>
+						<option id="other_option">Other Person</option>
+					  </select>
+					</div>
+				</div>
+				<div class="col-sm-1">
+					<p id="owes">owe(s)</p>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+					  <!--<label for="sel1" id="select_prompt">Select Debtee...</label>-->
+					  <select class="form-control" id="second_selection">
+						<option>You</option>
+						<option id="other_option2">Other Person</option>
+					  </select>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="input-group">
+						<span class="input-group-addon">$</span>
+						<input type="text" id="amount_owed" class="form-control" placeholder="amount owed">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="text_entry">
+			<div class="row">
+				<div class="col-sm-8">
+					<form class="form-inline">
+						<div class="form-group">
+							<!--<label for="sel1" id="select_prompt">Select Debtor...</label>-->
+							<label class="control-label">Frequency of Notifications:</label>
+						</div>
+						<div class="form-group">
+							<select class="form-control" id="sel1">
+								<option>Daily</option>
+								<option>Weekly</option>
+								<option>Twice a Month</option>
+								<option>Monthly</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<!--<a href="addTab2.html" class="btn btn-default" role="button" id="next_btn" onclick="otherUser();">Next</a>-->
+				<a href="#" type="button" class="btn btn-default" role="button" id="next_btn" onclick="getUserInput()">Next</a>
+			</div>
+			<div class="col-sm-9">
+			</div>
+		</div>
+
+
+	</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!--<script src="resources/js/custom_addTab.js"></script>-->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="resources/js/bootstrap.min.js"></script>
+  </body>
+</html>

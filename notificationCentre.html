@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Digital Receipt Jar: Notification Centre</title>
+
+    <!-- Bootstrap -->
+    <link href="resources/css/bootstrap.min.css" type = "text/css" rel="stylesheet">
+	<!--<link href="resources/css/custom_template.css" type = "text/css" rel="stylesheet">-->
+	<link rel="stylesheet" type="text/css" href="resources/css/custom_template.css">
+
+	<link href="resources/css/custom_notification.css" type="text/css" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/a39b8b82a1.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="b">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+                <a class="navbar-brand" href="mainscreen.html" style="font-size: 30px"><img src="resources/img/djr.png" width="500" height="40"></a>
+			</div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="mainscreen.html" class="active" data-toggle="tooltip" title="Home"><img src="resources/img/house.png" width="20"></a></li>
+                    <li><a href="addTab.html" data-toggle="tooltip" title="Add a Tab"><img src="resources/img/plus_sign.png" width="20"></a></li>
+                    <li><a href="notificationCentre.html" data-toggle="tooltip" title="Notification Centre"><img src="resources/img/mail.png" width="20"></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="My Profile" id="profile_dropdown"><!--My Profile--><img id="profile_img" src="resources/img/silhouette.png" width="20"><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Edit my Profile</a></li>
+                            <li><a href="#">Preferences</a></li>
+                            <li><a href="addTab.html">Add a Tab</a></li>
+                            <li><a href="notificationCentre.html">Notification Centre</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="signin.html">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+		</div>
+		
+		
+	</div>
+	<div id="box">
+		<div class="container">
+	      	<div class="jumbotron text-center">
+            		<i class="fa fa-comments fa-4x"></i>
+          		
+	        	<h1>Notification Centre</h1>
+	        	<a href="sentNotifications.html" class="btn btn-primary">See all sent</a>
+	        	<a href="#msg" class="btn btn-info" data-toggle="modal">Send a direct message</a>
+	      	</div>
+	      	<div class="row">
+	        	<div class="col-md-6">
+	          		<div class="panel panel-default">
+  						<div class="panel-body">
+                <h3 align="center"><i class="fa fa-exclamation"></i><strong> Incoming Notifications</strong></h3>
+  							<ul id="notifications" style="list-style:none">
+  								<li><i class="fa fa-dollar"></i> You owe Regina George <strong>$80</strong><p id="lentOn" class="right">From 6 months ago</p></li>
+  								<li><i class="fa fa-dollar"></i> You owe Cady Heron <strong>$20</strong><p id="lentOn" class="right">From 2 months ago</p></li>
+  								<li><i class="fa fa-dollar"></i> You owe Karen Smith <strong>$1.50</strong><p id="lentOn" class="right">From 25 days ago</p></li>
+  								<li><i class="fa fa-dollar"></i> You owe janis.ian@gmail.com <strong>$5</strong><p id="lentOn" class="right">From 17 days ago</p></li>
+  								<li><i class="fa fa-dollar"></i> You owe Gretchen Wieners <strong>$30</strong><p id="lentOn" class="right">From one week ago</p></li>
+  							</ul>
+  						</div>
+					</div>
+	        	</div>
+        		<div class="col-md-6">
+          			<div class="panel panel-default">
+  						  <div class="panel-body">
+                  <h3 align="center"><i class="fa fa-envelope-open"></i><strong> Message Inbox</strong></h3>
+    						  <ul id="messages" style="list-style: none">
+    							<li><a href="#default"data-toggle="modal"><i class="fa fa-envelope" style="color:red" data-toggle="tooltip" title="Urgent"></i></a> Regina George<p id="date" class="right">08/11/16</p></li>
+    							<li><a href="#default" data-toggle="modal"<i class="fa fa-envelope" data-toggle="tooltip" title="Unread"></i></a> Janis Ian<p id="date" class="right">22/10/16</p></li>
+    							<li><a href="#default"data-toggle="modal"<i class="fa fa-envelope-open-o" data-toggle="tooltip" title="Read"></i></a> Aaron Samuels <3<p id="date" class="right">03/10/16</p></li>
+    							<li><a href="#default"data-toggle="modal"<i class="fa fa-envelope-open-o" data-toggle="tooltip" title="Read"></i></a> Gretchen Wieners<p id="date" class="right">03/07/16</p></li>
+    							<li><a href="#default"data-toggle="modal"<i class="fa fa-envelope-open-o" data-toggle="tooltip" title="Read"></i></a> Damian<p id="date" class="right">27/02/16</p></li>
+  						</ul>
+  						</div>
+					</div>
+        </div>
+        <div style="text-align: center; padding-bottom: 20px">
+          <a href="#navSettings" class="btn btn-default" data-toggle="modal"><i class="fa fa-cog"></i><strong> Manage notification settings</strong> </a>
+        </div>
+	      	
+	    </div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <!--ALL THE POPUPS-->
+    <div class="modal fade" id="msg" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Send message</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-inline">
+          <div class="form-group">
+              <label for="user">To:</label>
+              <input type="user" class="form-control" id="user" placeholder="Enter email or @username">
+            </div>
+          </form>
+          <p></p>
+          <div class="form-group">
+            <label for="sel1">Select standard message:</label>
+            <select class="form-control" id="sel1">
+              <option>Select...</option>
+              <option>Please pay me back ASAP!</option>
+              <option>I need my money by the end of the month.</option>
+              <option>I promise I'll pay you within the week</option>
+              </select>
+          </div>
+          <p>OR</p>
+          <div class="form-group">
+              <label for="custom-msg">Custom message:</label>
+              <textarea class="form-control" rows="5" id="comment" placeholder="Type message..."></textarea>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Urgent?</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-danger" data-dismiss="modal">Discard</a>
+            <a class="btn btn-info" data-dismiss="modal">Send</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="navSettings" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Manage Notification Settings</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+            <label for="sel2">Change default notification frequency:</label>
+            <select class="form-control" id="sel2">
+              <option>Select...</option>
+              <option>Daily</option>
+              <option>Weekly</option>
+              <option>Twice a month</option>
+              <option>Monthly</option>
+              <option>Custom</option>
+              </select>
+          </div>
+          <p>Sort notifications by:</p>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Oldest debt first (Default)</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Newest debt first</label>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-danger" data-dismiss="modal">Cancel</a>
+            <a class="btn btn-info" data-dismiss="modal">Save all changes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="default" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Default Message</h4>
+          </div>
+          <div class="modal-body">
+            <p>From: John Doe</p>
+            <p style="border-style: groove">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu sem ut sem maximus porta et eget sapien. Aenean molestie, enim id tempus placerat, velit sapien eleifend eros, id tincidunt nunc odio viverra urna. Sed eget metus ante. Fusce et arcu nec mi volutpat semper vel eget sapien. Morbi congue, eros eu pulvinar varius, nisl lorem varius lectus, et aliquet felis ligula a magna. Praesent at dolor faucibus, tincidunt velit vitae, venenatis lorem. Fusce consectetur massa mi, vitae vestibulum ligula congue vel. Vivamus interdum non velit quis rutrum. Vivamus laoreet eleifend eros vel imperdiet. Aliquam erat volutpat. Sed eget laoreet velit. Vivamus nulla enim, mollis nec sem sit amet, maximus auctor felis. Duis luctus lobortis lectus nec ullamcorper. Vivamus consectetur odio metus, quis blandit nibh varius eget.</p>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-danger" data-dismiss="modal">Cancel</a>
+            <a class="btn btn-primary" data-dismiss="modal">Reply</a>
+            <a class="btn btn-info" data-dismiss="modal">Forward</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="resources/js/bootstrap.min.js"></script>
+  </body>
+</html>
